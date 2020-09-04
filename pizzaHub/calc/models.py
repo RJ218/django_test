@@ -2,9 +2,9 @@ from django.db import models
 
 
 # Create your models here.
-class MovieInfo:
-    movie_name: str
-    movie_img:str
-    movie_createdate:str
-    movie_releasedate:str
-    movie_descrip:str
+class MovieInfo(models.Model):
+    movie_name = models.CharField(max_length=100)
+    movie_img = models.TextField()
+    movie_createdate = models.CharField(max_length=100)
+    movie_releasedate = models.CharField(max_length=100)
+    movie_descrip = models.TextField()
